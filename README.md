@@ -1,3 +1,3 @@
-# AngularPushNotifications
+# AngularPlayGround
 
-## Learning push notifications! 📌
+## Playing around! 🤾🏻
