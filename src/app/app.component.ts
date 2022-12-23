@@ -1,4 +1,3 @@
-import { environment } from './../environments/environment';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,11 +10,11 @@ export class AppComponent implements OnInit {
   words: string[] = [];
 
   ngOnInit() {
-    fetch(`${environment.API_URL}&wordLength=5`, {
+    fetch(`${process.env['NG_APP_API_URL']}&wordLength=5`, {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': environment.X_RapidAPI_Key,
-        'X-RapidAPI-Host': environment.X_RapidAPI_Host,
+        'X-RapidAPI-Key': process.env['NG_APP_X_RapidAPI_Key']!,
+        'X-RapidAPI-Host': process.env['NG_APP_X_RapidAPI_Host']!,
       },
     })
       .then((response) => response.json())
